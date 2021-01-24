@@ -1,0 +1,19 @@
+{
+  "name": "first-mate",
+  "version": "0.0.1",
+  "description": "Virtual first mate to help the skipper",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine",
+    "test:watch": "nodemon --exec jasmine"
+  },
+  "author": "Martin Jarvis",
+  "license": "ISC",
+  "dependencies": {
+    "cherio": "^1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "jasmine": "^3.6.4",
+    "nodemon": "^2.0.7"
+  }
+}

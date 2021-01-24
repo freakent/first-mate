@@ -16,11 +16,13 @@ describe("Inshore waters forecast", function() {
         expect(result.issued_at).toBe('2021-01-24T12:00:00Z')
         expect(result.forecast_areas.length).toBe(19)
 
-        expect(result.forecast_area('area7').name).toBe('Selsey Bill to Lyme Regis')
-        expect(result.forecast_area('area7').forecast.wind).toBe('West veering northwest 4 to 6, decreasing 3 at times later.')
-        expect(result.forecast_area('area7').forecast.sea_state).toBe('Slight or moderate, occasionally rough offshore in west.')
-        expect(result.forecast_area('area7').forecast.weather).toBe('Showers, wintry at times, becoming fair later.')
-        expect(result.forecast_area('area7').forecast.visibility).toBe('Good, occasionally poor.')
+        let area = result.forecast_area('area7')
+        expect(area.name).toBe('Selsey Bill to Lyme Regis')
+        expect(area.issued_at).toBe('2021-01-24T12:00:00Z')
+        expect(area.forecast.wind).toBe('West veering northwest 4 to 6, decreasing 3 at times later.')
+        expect(area.forecast.sea_state).toBe('Slight or moderate, occasionally rough offshore in west.')
+        expect(area.forecast.weather).toBe('Showers, wintry at times, becoming fair later.')
+        expect(area.forecast.visibility).toBe('Good, occasionally poor.')
 
         expect(result.forecast_area('area19').name).toBe('Channel Islands')
         expect(result.forecast_area('area19').forecast.wind).toBe('Westerly 4 to 6 locally 7, soon increasing 5 to 7 locally gale 8, veering northwesterly this evening, then northerly 3 to 5 by tomorrow morning, decreasing 2 to 4 later.')

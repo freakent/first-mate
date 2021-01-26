@@ -1,3 +1,4 @@
+const util = require('util')
 const fs = require('fs')
 const path = require('path')
 const InshoreWatersForecast = require('../../lib/inshoreWatersForecast')
@@ -11,6 +12,8 @@ describe("Inshore waters forecast", function() {
         //console.log('result ->', result.data, result)
         //console.log('issued_at ->', result.data.issued_at, result.issued_at)
         //console.log('forecast_areas ->', result.data.forecast_areas)
+        //console.log('area7 ->', JSON.stringify(result.forecast_area('area7')))
+        //console.log('data', JSON.stringify(result, null, 4))
 
         expect(result.synopsis).toBe('Various areas of low pressure in the vicinity of the British Isles will bring generally unsettled conditions during the next couple of days. Wintry showers will affect most areas, especially the south during Sunday.');
         expect(result.issued_at).toBe('2021-01-24T12:00:00Z')
